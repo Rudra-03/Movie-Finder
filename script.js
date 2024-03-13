@@ -7,7 +7,8 @@ const searchBtn = document.getElementById("search");
 const loader = document.getElementsByClassName("loader")[0];
 
 const displayMovie = (movie_data) => {
-  const { Poster, Title, Actors, Language, Year, Runtime, imdbRating,Type } = movie_data;
+  const { Poster, Title, Actors, Language, Year, Runtime, imdbRating, Type } =
+    movie_data;
 
   const parentDiv = document.createElement("div");
   parentDiv.classList.add("card");
@@ -32,7 +33,9 @@ const displayMovie = (movie_data) => {
   langP.textContent = `Language : ${Language}`;
 
   const typeP = document.createElement("p");
-  typeP.textContent = `Type : ${Type.substr(0,1).toUpperCase()}${Type.slice(1)}`;
+  typeP.textContent = `Type : ${Type.substr(0, 1).toUpperCase()}${Type.slice(
+    1
+  )}`;
 
   const yearP = document.createElement("p");
   yearP.textContent = `Released Year: ${Year}`;
@@ -40,7 +43,7 @@ const displayMovie = (movie_data) => {
   const durationP = document.createElement("p");
   durationP.textContent = `Duration: ${Runtime}s`;
 
-  const ratingP =  document.createElement("p");
+  const ratingP = document.createElement("p");
   ratingP.textContent = `IMDB Rating: ${imdbRating}/10`;
 
   textDiv.appendChild(titleP);
